@@ -50,6 +50,17 @@
       h3 {
         color: lightgreen;
       }
+
+      /* Combinators Selectors */
+      /* Descendent Selcetor */
+      div p span {
+          color: rgb(107, 251, 143);
+        }
+        
+      /* Child Selector */
+      div>p>span {
+          color: aquamarine;
+      }
     </style>
   </head>
   <body>
@@ -124,5 +135,17 @@
     <a href="https://nados.io/feed">NADOS</a>
 
     <h3>i am H3</h3>
-  </body>
+
+    <!-- Combinators Selectors -->
+    <!-- Descendent selector -->
+
+    <div>
+        <p><span>I am a direct Child</span></p>
+    </div>
+
+    <div>
+        <span>
+            <p><span>I am an indirect Child</span></p>
+        </span>
+    </div>
 </html>
