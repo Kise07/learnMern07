@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Selectors</title>
     <style>
+      /* Universal Selector */
+      * {
+        background-color: black;
+      }
+
       div {
         color: red;
         font-size: 40px;
@@ -20,12 +25,30 @@
       }
 
       .largetext {
-        font-size: 36px;
+        font-size: 30px;
       }
 
-      .textcolor.largetext {
+      /* .textcolor.largetext {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
           sans-serif;
+      } */
+
+      #unique {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+
+      /* Grouping Selector */
+      h4 {
+      }
+      a {
+      }
+      h3 {
+      }
+      h4,
+      a,
+      h3 {
+        color: lightgreen;
       }
     </style>
   </head>
@@ -58,21 +81,48 @@
     <!-- class selector -->
     <h1>Class Selectors</h1>
     <p class="textcolor largetext">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
-      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      Part 1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
       similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
     </p>
 
     <p class="largetext">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
-      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      Part 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
       similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
     </p>
 
     <p class="textcolor">
-      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
-      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      Part 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
       similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
     </p>
+
+    <!-- id selector -->
+    <h1>ID Selectors</h1>
+    <p class="textcolor largetext" id="unique">
+      Part 1 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+
+    <p class="largetext">
+      Part 2 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+
+    <p class="textcolor">
+      Part 3 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis,
+      a laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+
+    <!-- Grouping Selector -->
+    <h4>i am H1</h4>
+
+    <a href="https://nados.io/feed">NADOS</a>
+
+    <h3>i am H3</h3>
   </body>
 </html>
