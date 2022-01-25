@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      div {
+        color: red;
+        font-size: 40px;
+      }
+
+      p {
+        color: lightcoral;
+      }
+
+      .textcolor {
+        color: lightblue;
+      }
+
+      .largetext {
+        font-size: 36px;
+      }
+
+      .textcolor.largetext {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS',
+          sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- element selector -->
+    <h1>Element Selector</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit
+      aliquid delectus recusandae totam ipsa, dignissimos eaque. Cupiditate
+      soluta sapiente aliquid assumenda, quos alias reiciendis labore,
+      perspiciatis dignissimos libero ad?
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus velit
+      aliquid delectus recusandae totam ipsa, dignissimos eaque. Cupiditate
+      soluta sapiente aliquid assumenda, quos alias reiciendis labore,
+      perspiciatis dignissimos libero ad?
+    </p>
+
+    <div>
+      <h1>First heading</h1>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum totam
+        commodi sequi est fugiat quod at ex saepe rem, minus et quia ut
+        excepturi. Eius error a dignissimos ut officiis!
+      </p>
+    </div>
+
+    <!-- class selector -->
+    <h1>Class Selectors</h1>
+    <p class="textcolor largetext">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
+      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+
+    <p class="largetext">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
+      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+
+    <p class="textcolor">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis, a
+      laboriosam. Dolor praesentium nesciunt eaque ad saepe earum iusto itaque
+      similique explicabo? Sed, est suscipit. Placeat ex ab quidem delectus.
+    </p>
+  </body>
+</html>
