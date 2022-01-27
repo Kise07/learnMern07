@@ -46,7 +46,7 @@
       h3 {
       } */
       h4,
-      a,
+      /* a, */
       h3 {
         color: lightgreen;
       }
@@ -60,6 +60,15 @@
       /* Child Selector */
       div>p>span {
           color: aquamarine;
+      }
+
+      /* attribute selector */
+      a[href="http://nados.io"] {
+        color: lightcoral;
+      }
+      
+      p[class="abc"]{
+        color: aqua;
       }
     </style>
   </head>
@@ -148,4 +157,11 @@
             <p><span>I am an indirect Child</span></p>
         </span>
     </div>
+
+    <!-- Attribute selector -->
+    <p class="abc">Hello i am attribute</p>
+    <a href="http://nados.io" target="_blank">NADOS</a>
+    <a href="http://google.com">Google</a>
+    <a href="http://netflix.com" target="_blank">Netflix</a>
+
 </html>
