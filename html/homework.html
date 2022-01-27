@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeWork!</title>
+    <style>
+      /* -1 */
+      /* p {
+        color: blue;
+      } */
+
+      /* -2 */
+      /* li {
+        color: blue;
+      } */
+
+      /* -3 */
+      /* div h1 span {
+        color: blue;
+      } */
+
+      /* -4 */
+      /* .class1,
+      .class2 {
+        color: blue;
+      } */
+
+      /* -5 */
+      /* .m1.m2 {
+        color: blue;
+      } */
+
+      /* -6 */
+      /* .c1 div span {
+        color: blue;
+      } */
+
+      /* -7 */
+      /* .c1 > p {
+        color: blue;
+      } */
+
+      /* -8 */
+      /* .s2#the-one {
+        color: blue;
+      } */
+
+      /* -9 */
+      #the-one div.c1.c2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- -1 -->
+    <!-- add css styles to all h1 tags making it blue -->
+    <p>I'm a paragraph. Help me to become h1.</p>
+    <p>I'm a paragraph. Help me to become h1.</p>
+    <p>I'm a paragraph. Help me to become h1.</p>
+    <p>I'm a paragraph. Help me to become h1.</p>
+
+    <!-- -2 -->
+    <!-- write css selector to select the obvious list male them blue -->
+    <ol>
+      <li>I</li>
+      <li>Am</li>
+      <li>A</li>
+      <li>List</li>
+    </ol>
+
+    <div>
+      <ol>
+        <li>Select</li>
+        <li>Me</li>
+      </ol>
+    </div>
+
+    <div>
+      <li>Random</li>
+    </div>
+
+    <!-- -3 -->
+    <!-- select "I'm the direct son" and make it blue -->
+    <div>
+      <h1>
+        <span>I'm the direct son</span>
+      </h1>
+    </div>
+
+    <div>
+      <span>
+        <h1>
+          <span>I'm the indirect son</span>
+        </h1>
+      </span>
+    </div>
+
+    <!-- -4 -->
+    <!-- Select the obvious p tags and make them blue -->
+    <p>Random</p>
+    <p>Random</p>
+    <p>Random</p>
+    <p>Random</p>
+    <p>Random</p>
+    <p>Random</p>
+    <p>Random</p>
+
+    <p class="class1">Select me and next guy</p>
+    <p class="class2">Yes me!</p>
+
+    <!-- -5 -->
+    <!-- Select the element with multiple classes(m1 & m2) and make them blue -->
+    <div class="m1 m2">Select me</div>
+
+    <div class="m1">Not me</div>
+    <div class="m2">Not me either</div>
+
+    <!-- -6 -->
+    <!-- Select "I'm here. find me" and make them blue -->
+
+    <div class="c1">
+      <div>
+        <div>
+          <span>
+            <div>I'm here. find me</div>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <span>
+      <div class="c1">Dont select me</div>
+    </span>
+
+    <!-- -7 -->
+    <!-- select "I'm the direct son" and make it blue -->
+    <div class="c1">
+      <p>I'm the direct son</p>
+    </div>
+
+    <div class="c2">
+      <span>
+        <p>I'm the indirect son</p>
+      </span>
+    </div>
+
+    <!-- -8 -->
+    <!-- Select s2 with id=the-one and make it blue -->
+    <p class="s1">Random</p>
+    <p class="s1">Random</p>
+    <p class="s1">Random</p>
+    <p class="s1" id="the-two">Random</p>
+    <p class="s2">Random</p>
+    <p class="s2">Random</p>
+    <p class="s2" id="the-one">Random</p>
+    <p class="s2">Random</p>
+    <p class="s2">Random</p>
+
+    <!-- -9 -->
+    <!-- Select the element with "Select me" and make it blue -->
+    <div class="some-class">
+      <div id="the-one">
+        <p>Random</p>
+        <div>
+          <p class="c1 c2">Random</p>
+        </div>
+        <p class="c1 c2">Select me</p>
+        <div class="c1 c2">Select me</div>
+      </div>
+    </div>
+
+    <div class="some-class">
+      <p class="c1">Random</p>
+      <p class="c2">Random</p>
+      <p class="c1 c2">Random</p>
+    </div>
+  </body>
+</html>
