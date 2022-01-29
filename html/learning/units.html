@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Units</title>
+    <style>
+      html {
+        font-size: 30px;
+      }
+
+      .parent {
+        font-size: 35px;
+        /* 1em = 35px */
+      }
+
+      .px {
+        width: 200px;
+      }
+
+      .vw {
+        width: 30vw;
+      }
+
+      .em {
+        width: 10em;
+      }
+
+      .rem {
+        width: 10rem;
+        /* 160px will be width; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="box px">
+        I am 200px wide Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Dignissimos architecto sint perferendis tempora eos repellendus atque
+        nisi delectus neque! Tempore, molestias praesentium ut alias vero
+        doloribus repellendus dolorem. Non, dolore!
+      </div>
+      <div class="box vw">I am 10vw wide</div>
+      <div class="parent"></div>
+      <div class="box em">I am 10em wide</div>
+
+      <div>
+        <div class="box rem">I am 10 rem wide</div>
+      </div>
+    </div>
+  </body>
+</html>
