@@ -1,10 +1,13 @@
 h1 {
   margin-left: 3rem;
+  font-weight: 400;
 }
 
 li {
   list-style: none;
   margin-left: 2rem;
+  padding-top: 8px;
+  font-size: 1.3rem;
 }
 
 .navbar > nav {
@@ -14,6 +17,7 @@ li {
 
 ul {
   display: flex;
+  margin-right: 2rem;
 }
 
 img[src='images/lap.jpeg'] {
@@ -28,8 +32,14 @@ img[src='images/lap.jpeg'] {
 }
 
 .skills > div {
+  margin-left: 1rem;
+  width: 30vw;
   text-align: center;
   margin-top: 2rem;
+}
+
+.skills > div > p {
+  padding: 1rem;
 }
 
 .footer {
@@ -41,4 +51,17 @@ img[src='images/lap.jpeg'] {
 
 .footer > p {
   font-size: 25px;
+}
+
+a:link,
+a:visited {
+  color: rgb(0, 0, 0);
+}
+
+a:hover {
+  color: lightpink;
+}
+
+a {
+  text-decoration: none;
 }
