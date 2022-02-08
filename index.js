@@ -40,5 +40,12 @@ console.log(f);
 // single quotes, double quotes, backtick
 var str = 'a';
 console.log(typeof str);
-str = 'How are you doing ?';
+str = 'How are you doing ?\ni am fine, how are you ?';
+// backslash num("\n")
 console.log(str);
+
+var b = 'I hope you guys are able to grasp the concepts';
+console.log(b);
+
+var num = 4500;
+console.log(`half of ${num} is ${num / 2}`);
