@@ -71,4 +71,4 @@ let additionIIFE = (function (a, b) {
 })(20, 30);
 
 console.log(additionIIFE);
-console.log(additionIIFE(20, 30));
+// console.log(additionIIFE(20, 30));
