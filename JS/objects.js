@@ -41,7 +41,11 @@ let captainAmerica = {
 console.log(captainAmerica);
 console.log(captainAmerica.friends);
 console.log(captainAmerica.friends[0]);
+console.log('printed using bracket notation ' + captainAmerica['friends'][0]);
 captainAmerica.sayHi(); // methods accesing
+
+// nested objects
+console.log(captainAmerica.address.city);
 
 // methods -> objects ke andar function
 console.log(str.toUpperCase());
@@ -57,6 +61,12 @@ for (let haathi in captainAmerica) {
 	console.log(captainAmerica[haathi]); // bracket notation usage
 }
 
+console.log(typeof captainAmerica.friends);
+
+// deleting the key of an object using 'delete' keyword
+delete captainAmerica.lastName;
+console.log(captainAmerica.lastName);
+
 // str{
 //     length: //
 //     toUpperCase: function() {
@@ -64,6 +74,16 @@ for (let haathi in captainAmerica) {
 //         for()
 //     }
 // }
+
+let car = {
+	name: 'Ferrari',
+	modal: 2022,
+	startEngine: function () {
+		console.log(`Starting the engine of the car ${this.name}`);
+	},
+};
+
+car.startEngine();
 
 // methods -> objects ke andar function
 console.log(str.toUpperCase());
