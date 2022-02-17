@@ -5,6 +5,7 @@ console.log(obj);
 
 let person = {
 	// key : value
+	// key(property, method()) : value
 	name: 'Abhishek',
 	age: 28,
 	phone: 99999999999,
@@ -44,3 +45,34 @@ captainAmerica.sayHi(); // methods accesing
 
 // methods -> objects ke andar function
 console.log(str.toUpperCase());
+
+// for loop
+// in keyword in JS is used to get keys from that objects
+for (let haathi in captainAmerica) {
+	// key
+	console.log(haathi);
+	// haathi jo variable h uske andar meri key ki value padi hui h
+	// value
+	// variable ke andar jo binded value h wo chahiye
+	console.log(captainAmerica[haathi]); // bracket notation usage
+}
+
+// str{
+//     length: //
+//     toUpperCase: function() {
+
+//         for()
+//     }
+// }
+
+// methods -> objects ke andar function
+console.log(str.toUpperCase());
+
+let arr = ['a', 'b', 1, true];
+
+let arrr = {
+	0: 'a',
+	1: 'b',
+	2: 1,
+	3: true,
+};
