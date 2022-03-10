@@ -22,7 +22,7 @@
 // }
 // z();
 
-let a;
-a = 10;
-// const c;
-const c = 100;
+// let a;
+// a = 10;
+// // const c;
+// const c = 100;
