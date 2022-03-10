@@ -19,7 +19,6 @@ fs.appendFileSync('f1.txt', '\nYou guys are smart');
 // console.log(res);
 
 let data = fs.readFileSync('f1.txt');
-console.log(data + '');
 // data receive is an object type, data is in buffer format. For it to be readable, we convert it from buffer to string.
 console.log(data + ''); // automatic type conversion se buffer string main convert tho gayi h.
 
