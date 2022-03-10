@@ -26,3 +26,29 @@
 // a = 10;
 // // const c;
 // const c = 100;
+
+function outer() {
+	var a = 7;
+	function inner() {
+		console.log(a);
+	}
+	a = 10;
+	return inner;
+}
+
+var c = outer();
+console.log(c);
+c();
+
+const colorConfig = {
+	red: true,
+	blue: false,
+	green: true,
+	black: true,
+	yellow: false,
+};
+
+const colors = ['pink', 'red', 'blue'];
+// --left to right in a line & top to bottom in a file
+console.log(colorConfig.colors[1]);
+// console.log(colorConfig[colors[1]]); --Ans
