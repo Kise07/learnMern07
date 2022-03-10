@@ -1,19 +1,19 @@
 const os = require('os');
 // returns the underlying architecture
 let mySystemArch = os.arch();
-console.log(mySystemArch);
+// console.log(mySystemArch);
 
 // return information on the cpus
 let myCpuInfo = os.cpus();
-console.log(myCpuInfo);
+// console.log(myCpuInfo);
 
 // Returns the host name of the operating system as a string.
 let hostName = os.hostname();
-console.log(hostName);
+// console.log(hostName);
 
 // Returns an object containing network interfaces that have been assigned a network address.
 let networkInfo = os.networkInterfaces();
-console.log(networkInfo);
+// console.log(networkInfo);
 
 // Returns the operating system as a string.
 console.log(os.release());
