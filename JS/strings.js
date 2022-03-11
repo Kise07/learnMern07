@@ -1,11 +1,18 @@
 // String is a sequence of characters
 
+const { log } = require('console');
+
 var str = 'Hello pepcoders';
 // H e l l o <space> p e p c  o  d  e  r  s
 // 0,1,2,3,4,   5,   6,7,8,9,10,11,12,13,14
 console.log(str);
 
 console.log(str[4]);
+
+// strings in js are immutable
+str[4] = 'z';
+console.log(str);
+
 console.log(str.length);
 
 // String methods
@@ -64,3 +71,9 @@ console.log(trimStr.length);
 
 console.log(trimStr.trim());
 console.log(trimStr.trim().length);
+
+var str = 'Hello hello my name hello is Abhishek';
+console.log(str);
+// divides string on the basis of arguments and puts them in an array
+var a = str.split('hello');
+console.log(a);
