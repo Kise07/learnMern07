@@ -45,6 +45,7 @@ let contentArr = content.split('\n'); // "\r\n" for windows laptop
 console.table(contentArr);
 
 // check if -s is present or not
+let tempArr = [];
 let isPresent = optionsArr.includes('-s');
 if (isPresent) {
 	for (let i = 1; i < contentArr.length; i++) {
@@ -55,7 +56,6 @@ if (isPresent) {
 		}
 	}
 	console.table(contentArr);
-	let tempArr = [];
 	// push everything in tempArr except null
 	for (let i = 0; i < contentArr.length; i++) {
 		if (contentArr[i] != null) {
@@ -96,6 +96,20 @@ if (finalOption == '-n') {
 	modifiyContenByB();
 }
 
-function modifiyContenByN() {}
+function modifiyContenByN() {
+	for (let i = 0; i < contentArr.length; i++) {
+		contentArr[i] = i + 1 + ') ' + contentArr[i];
+	}
+}
 
-function modifiyContenByB() {}
+console.log(contentArr);
+
+function modifiyContenByB() {
+	let count = 1;
+	for (let i = 0; i < contentArr.length; i++) {
+		if (contentArr[i] != '') {
+			contentArr[i] = count + ') ' + contentArr[i];
+			count++;
+		}
+	}
+}
