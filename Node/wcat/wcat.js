@@ -7,14 +7,14 @@ const fs = require('fs');
 // let input = process.argv;
 // console.log(input);
 let inputArr = process.argv.slice(2);
-console.log(inputArr);
+// console.log(inputArr);
 
 let filesArr = [];
 let optionsArr = [];
 // ==============> placed files path in filesArr <=============
 for (let i = 0; i < inputArr.length; i++) {
 	let firstChar = inputArr[i].charAt(0);
-	console.log(firstChar);
+	// console.log(firstChar);
 	if (firstChar == '-') {
 		optionsArr.push(inputArr[i]);
 	} else {
@@ -39,10 +39,10 @@ for (let i = 0; i < filesArr.length; i++) {
 	let fileContent = fs.readFileSync(filesArr[i]);
 	content = content + fileContent + '\n'; // "\r\n" for windows laptop
 }
-console.log(content);
+// console.log(content);
 
 let contentArr = content.split('\n'); // "\r\n" for windows laptop
-console.table(contentArr);
+// console.table(contentArr);
 
 // check if -s is present or not
 let tempArr = [];
@@ -55,14 +55,15 @@ if (isPresent) {
 			contentArr[i] = null;
 		}
 	}
-	console.table(contentArr);
+	// console.table(contentArr);
+
 	// push everything in tempArr except null
 	for (let i = 0; i < contentArr.length; i++) {
 		if (contentArr[i] != null) {
 			tempArr.push(contentArr[i]);
 		}
 	}
-	console.log('data after removing extra lines\n', tempArr);
+	// console.log('data after removing extra lines\n', tempArr);
 }
 
 contentArr = tempArr;
@@ -102,8 +103,6 @@ function modifiyContenByN() {
 	}
 }
 
-console.log(contentArr);
-
 function modifiyContenByB() {
 	let count = 1;
 	for (let i = 0; i < contentArr.length; i++) {
@@ -113,3 +112,5 @@ function modifiyContenByB() {
 		}
 	}
 }
+
+console.log(contentArr);
