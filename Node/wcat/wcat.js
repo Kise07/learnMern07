@@ -28,8 +28,8 @@ for (let i = 0; i < filesArr.length; i++) {
 	let doesExist = fs.existsSync(filesArr[i]);
 	if (!doesExist) {
 		console.log('One or more File(s) does not exist ');
-		return;
-		// break;
+		// return;
+		process.exit();
 	}
 }
 
