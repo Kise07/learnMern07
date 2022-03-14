@@ -39,7 +39,7 @@ for (let i = 0; i < filesArr.length; i++) {
 	let fileContent = fs.readFileSync(filesArr[i]);
 	content = content + fileContent + '\n'; // "\r\n" for windows laptop
 }
-// console.log(content);
+console.log(content);
 
 let contentArr = content.split('\n'); // "\r\n" for windows laptop
 // console.table(contentArr);
@@ -55,7 +55,7 @@ if (isPresent) {
 			contentArr[i] = null;
 		}
 	}
-	// console.table(contentArr);
+	console.table(contentArr);
 
 	// push everything in tempArr except null
 	for (let i = 0; i < contentArr.length; i++) {
@@ -64,9 +64,8 @@ if (isPresent) {
 		}
 	}
 	// console.log('data after removing extra lines\n', tempArr);
+	contentArr = tempArr;
 }
-
-contentArr = tempArr;
 
 let indexOfN = optionsArr.indexOf('-n');
 let indexOfB = optionsArr.indexOf('-b');
