@@ -44,15 +44,41 @@ function organize(srcPath) {
 
 	// Reads the contents of the directory. -> basically reads the names of files present in directory
 	let allFiles = fs.readdirSync(srcPath);
-	console.log(allFiles);
+	// console.log(allFiles);
 
 	// 4. traverse over all the files and classify them on the basis of their extension (.pdf, .mp3
 	for (let i = 0; i < allFiles.length; i++) {
-		// let ext = allFiles[i].split('.')[1];
+		// let ext = allFiles[i].;
 		// extname returns the extension of the file
-		let ext = path.extname(allFiles[i]);
-		console.log(ext);
+		let fullPathOfFile = path.join(srcPath, allFiles[i]);
+		// console.log(fullPathOfFile);
+		// 1. check if it a file or folder
+		// lstatSync gives the information regarding the link provided.
+		let isFile = fs.lstatSync(fullPathOfFile).isFile(); // true -> file hai to or false -> agar folder h
+		console.log(allFiles[i]+" is "+isFile);
+		if (isFile) {
+			// 1.1 get ext name
+			let ext = path.extname(allFiles[i]).split('.')[1];
+			// console.log(ext);
+			// 1.2 get folder name from extension
+			let folderName=getFolderName(ext); // archieves
+			// 1.3 copy from src folder (srcPath) and paste in dest folder (folder_name else.g. document, media, etc)
+					//    copy      kya copy karo   paste
+			copyFileToDest(srcPath, fullPathOfFile, folderName);
+		}
 	}
 }
+
+function getFolderName(srcPath) {
+
+	// magic
+	return folderName;
+}
+
+function copyFileToDest(srcPath, fullPathOfFile, folderName) {
+
+	// magic
+}
+
 let srcPath = '/Users/kise/Dropbox/fjp5/Node/fileOrganizer/downloads';
 organize(srcPath);
