@@ -51,18 +51,18 @@ function organize(srcPath) {
 		// let ext = allFiles[i].;
 		// extname returns the extension of the file
 		let fullPathOfFile = path.join(srcPath, allFiles[i]);
-		// console.log(fullPathOfFile);
+		console.log(fullPathOfFile);
 		// 1. check if it a file or folder
 		// lstatSync gives the information regarding the link provided.
-		let isFile = fs.lstatSync(fullPathOfFile).isFile(); // true -> file hai to or false -> agar folder h
-		console.log(allFiles[i] + ' is ' + isFile);
-		if (isFile) {
+		let isThisAFile = fs.lstatSync(fullPathOfFile).isFile(); // true -> file hai to or false -> agar folder h
+		console.log(allFiles[i] + ' is ' + isThisAFile);
+		if (isThisAFile) {
 			// 1.1 get ext name
 			let ext = path.extname(allFiles[i]).split('.')[1];
 			// console.log(ext);
 			// 1.2 get folder name from extension
 			let folderName = getFolderName(ext); // archieves
-			console.log(folderName);
+			// console.log(folderName);
 			// 1.3 copy from src folder (srcPath) and paste in dest folder (folder_name else.g. document, media, etc)
 			//    copy      kya copy karo   paste
 			copyFileToDest(srcPath, fullPathOfFile, folderName);
@@ -73,14 +73,14 @@ function organize(srcPath) {
 function getFolderName(ext) {
 	// magic
 	for (let key in types) {
-		console.log(key);
+		// console.log(key);
 		for (let i = 0; i < types[key].length; i++) {
 			if (types[key][i] == ext) {
 				return key;
 			}
 		}
 	}
-	return folderName;
+	return 'miscellaneous';
 }
 
 function copyFileToDest(srcPath, fullPathOfFile, folderName) {
@@ -103,5 +103,9 @@ function copyFileToDest(srcPath, fullPathOfFile, folderName) {
 	// magic
 }
 
-let srcPath = '/Users/kise/Dropbox/fjp5/Node/fileOrganizer/downloads';
-organize(srcPath);
+// let srcPath = '/Users/kise/Dropbox/fjp5/Node/fileOrganizer/downloads';
+// organize(srcPath);
+
+module.exports = {
+	organize: organize,
+};
