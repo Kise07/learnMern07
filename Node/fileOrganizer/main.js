@@ -1,6 +1,7 @@
 // entry point of my command line
 let helpFunc = require('./commands/help');
 let orgFunc = require('./commands/organize');
+let treeFunc = require('./commands/tree');
 // console.log(helpFunc.ghoda());
 let inputArr = process.argv.slice(2);
 // console.log(inputArr);
@@ -10,9 +11,10 @@ switch (command) {
 	//organizee checking spelling (--Just for Test)
 	case 'tree':
 		// call tree function
-		console.log(
-			'tree function called and executed successfully on path ' + path
-		);
+		treeFunc.tree(path);
+		// console.log(
+		// 	'tree function called and executed successfully on path ' + path
+		// );
 		break;
 	case 'organize':
 		// call organize function
