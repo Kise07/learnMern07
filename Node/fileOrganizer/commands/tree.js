@@ -6,11 +6,10 @@ function treeFn(dirPath) {
 	if (dirPath == undefined) {
 		console.log('Please Enter  a Valid Path');
 		return;
-	} else {
-		let doesExist = fs.existsSync(dirPath);
-		if (doesExist == true) {
-			treeHelper(dirPath, ' ');
-		}
+	}
+	let doesExist = fs.existsSync(dirPath);
+	if (doesExist == true) {
+		treeHelper(dirPath, ' ');
 	}
 }
 

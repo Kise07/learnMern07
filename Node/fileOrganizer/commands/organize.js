@@ -1,7 +1,7 @@
 const fs = require('fs'); //fs module
 const path = require('path'); //path module
 let types = {
-	media: ['mp4', 'mkv', 'mp3'],
+	media: ['mp4', 'mkv', 'mp3', 'mov'],
 	archives: ['zip', '7z', 'rar', 'tar', 'gz', 'ar', 'iso', 'xz'],
 	documents: [
 		'docx',
@@ -17,8 +17,10 @@ let types = {
 		'txt',
 		'ps',
 		'tex',
+		'csv',
+		'json',
 	],
-	app: ['exe', 'dmg', 'pkg', 'deb'],
+	app: ['exe', 'dmg', 'pkg', 'deb', 'apk'],
 	images: ['png', 'jpg', 'jpeg'],
 };
 
