@@ -36,6 +36,17 @@ function getMatchDetails(html) {
 	);
 	console.log(matchResEle.text());
 	//4. get team name
+	let teamNames = selecTool('.name-detail>.name-link');
+	// console.log(teamNames.text());
+
+	let team1 = selecTool(teamNames[0]).text();
+	let team2 = selecTool(teamNames[1]).text();
+	console.log(team1);
+	console.log(team2);
+
+	//5. get innings
+	let allBatsmenRows = selecTool('.table.batsman tbody>tr');
+	console.log(allBatsmenRows.text());
 }
 // visit every scorecard and get info
 module.exports = {
