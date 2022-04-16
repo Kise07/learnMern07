@@ -84,9 +84,5 @@ function waitAndClick(algoBtn) {
 				console.log(err);
 			});
 	});
-
-	// waitClickPromise.then(function () {
-	// 	console.log("inside .then of waitClickPromise");
-	// });
 	return waitClickPromise;
 }
