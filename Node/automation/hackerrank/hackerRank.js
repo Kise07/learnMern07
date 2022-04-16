@@ -1,7 +1,7 @@
 const puppeteer = require("puppeteer");
-// let { email, password } = require("./secrets");
-let email = "AceD14";
-let password = "ace1412";
+let { email, password } = require("./secrets");
+// let email = "";
+// let password = "";
 let { answer } = require("./codes");
 
 let curTab;
