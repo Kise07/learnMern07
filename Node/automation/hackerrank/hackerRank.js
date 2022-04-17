@@ -17,11 +17,11 @@ let browserOpenPromise = puppeteer.launch({
 browserOpenPromise // fulfill
 	.then(function (browser) {
 		console.log("browser is open");
-		console.log(browserOpenPromise);
+		// console.log(browserOpenPromise);
 		// console.log(browser);
 		// An array of all open pages inside the Browser.
 		// returns an array with all the pages in all browser contexts
-		let allTabsPromise = browser.pages();
+		let allTabsPromise = browser.pages(); // browser.newPage() => new tab open hta h
 		return allTabsPromise;
 	})
 	.then(function (allTabsArr) {
@@ -90,6 +90,13 @@ browserOpenPromise // fulfill
 		// question solve krna h
 		// link to the question to be solved, idx of the linksArr
 		let questionWillBeSolvedPromise = questiionSolver(linksArr[0], 0);
+		for (let i = 1; i < linksArr.length; i++) {
+			questionWillBeSolvedPromise = questionWillBeSolvedPromise.then(
+				function () {
+					return questiionSolver[(linksArr[i], i)];
+				}
+			);
+		}
 		return questionWillBeSolvedPromise;
 	})
 	.then(function () {
@@ -141,7 +148,7 @@ function questiionSolver(url, idx) {
 			})
 			.then(function () {
 				// control key is pressed promise
-				let controlPressedPromise = curTab.keyboard.press("Control");
+				let controlPressedPromise = curTab.keyboard.down("Control");
 				return controlPressedPromise;
 			})
 			.then(function () {
@@ -153,6 +160,10 @@ function questiionSolver(url, idx) {
 				return xKeyPressedPromise;
 			})
 			.then(function () {
+				let ctrlIsReleasedPromise = curTab.keyboard.up("Control");
+				return ctrlIsReleasedPromise;
+			})
+			.then(function () {
 				// select the editor promise
 				let cursorOnEditorpromise = curTab.click(
 					".monaco-editor.no-user-select.vs"
@@ -160,20 +171,25 @@ function questiionSolver(url, idx) {
 				return cursorOnEditorpromise;
 			})
 			.then(function () {
-				let aKeyPressedPromise = curTab.keyboard.press("a");
+				// control key is pressed promise
+				let controlPressedPromise = curTab.keyboard.down("Control");
+				return controlPressedPromise;
+			})
+			.then(function () {
+				let aKeyPressedPromise = curTab.keyboard.press("A", { delay: 100 });
 				return aKeyPressedPromise;
 			})
 			.then(function () {
-				let vKeyPressedPromise = curTab.keyboard.press("v");
+				let vKeyPressedPromise = curTab.keyboard.press("V", { delay: 100 });
 				return vKeyPressedPromise;
-			})
-			.then(function () {
-				let submitButtonClickedPromise = curTab.click(".hr-monaco-submit");
-				return submitButtonClickedPromise;
 			})
 			.then(function () {
 				let controlDownPromise = curTab.keyboard.up("Control");
 				return controlDownPromise;
+			})
+			.then(function () {
+				let submitButtonClickedPromise = curTab.click(".hr-monaco-submit");
+				return submitButtonClickedPromise;
 			})
 			.then(function () {
 				console.log("code submitted successfully");
