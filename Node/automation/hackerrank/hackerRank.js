@@ -37,14 +37,17 @@ browserOpenPromise // fulfill
 		// console.log(data);
 		console.log("Hackerrank login page opened");
 		//selector(where to type), data(what to type)
-		let emailWillBeTypedPromise = curTab.type("input[name='username']", email);
+		let emailWillBeTypedPromise = curTab.type("input[name='username']", email, {
+			delay: 100,
+		});
 		return emailWillBeTypedPromise;
 	})
 	.then(function () {
 		console.log("email is typed");
 		let passwordWillBeTypedPromise = curTab.type(
 			"input[type='password']",
-			password
+			password,
+			{ delay: 100 }
 		);
 		return passwordWillBeTypedPromise;
 	})
@@ -96,6 +99,8 @@ browserOpenPromise // fulfill
 					return questiionSolver[(linksArr[i], i)];
 				}
 			);
+			// a = 10;
+			// a = a + 1;
 		}
 		return questionWillBeSolvedPromise;
 	})
@@ -143,7 +148,9 @@ function questiionSolver(url, idx) {
 				return waitForTextBoxPromise;
 			})
 			.then(function () {
-				let codeWillBeTypedPromise = curTab.type(".custominput", answer[idx]);
+				let codeWillBeTypedPromise = curTab.type(".custominput", answer[idx], {
+					delay: 100,
+				});
 				return codeWillBeTypedPromise;
 			})
 			.then(function () {
@@ -176,11 +183,11 @@ function questiionSolver(url, idx) {
 				return controlPressedPromise;
 			})
 			.then(function () {
-				let aKeyPressedPromise = curTab.keyboard.press("A", { delay: 100 });
+				let aKeyPressedPromise = curTab.keyboard.press("A");
 				return aKeyPressedPromise;
 			})
 			.then(function () {
-				let vKeyPressedPromise = curTab.keyboard.press("V", { delay: 100 });
+				let vKeyPressedPromise = curTab.keyboard.press("V");
 				return vKeyPressedPromise;
 			})
 			.then(function () {
