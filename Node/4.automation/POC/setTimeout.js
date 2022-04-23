@@ -55,27 +55,50 @@
 // 	outer(i);
 // }
 
-for (var i = 1; i <= 10; i++) {
-	// hint: closures and scope -> wrapping
-	function cb(a) {
-		console.log(a);
-	}
-	setTimeout(cb, 2000 * i, i);
-}
+// for (var i = 1; i <= 10; i++) {
+// 	// hint: closures and scope -> wrapping
+// 	function cb(a) {
+// 		console.log(a);
+// 	}
+// 	setTimeout(cb, 2000 * i, i);
+// }
 
-function a() {
-	let x = 100;
-	function y() {
-		return x;
-	}
-	return y;
-}
+// function a() {
+// 	let x = 100;
+// 	function y() {
+// 		return x;
+// 	}
+// 	return y;
+// }
 
-let fn = a();
-let ans = fn();
-console.log(ans);
+// let fn = a();
+// let ans = fn();
+// console.log(ans);
+
+// let b = 1000;
 
 // let i=1;
 // while (i <= 10){
 
 // }
+
+// console.log("before");
+// setTimeout(function () {
+// 	console.log("time over");
+// }, 50000);
+// console.log("after");
+
+// fetch() api
+
+console.log("before");
+setTimeout(function () {
+	console.log("time over");
+}, 5000);
+fetch("https://jsonplaceholder.typicode.com/todos/1")
+	.then(function (response) {
+		return response.json(); // when a promise is returned , it creates a promise and then return it , which is obviously of fulfilled state
+	})
+	.then(function (json) {
+		console.log(json);
+	});
+console.log("after");
