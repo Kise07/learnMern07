@@ -2,29 +2,29 @@
 
 const fs = require("fs");
 
-//callback hell
-// fs.readFile("f1.txt", function cb1(err, res) {
-//   if (err) {
-//     console.log(err);
-//   } else {
-//     console.log(res + "");
-//     fs.readFile("f2.txt", function cb2(err, res) {
-//       if (err) {
-//         console.log(err);
-//       } else {
-//         console.log(res + "");
-//         fs.readFile("f3.txt", function cb3(err, res) {
-//           if (err) {
-//             console.log(err);
-//           } else {
-//             console.log(res + "");
-//             console.log("read all files");
-//           }
-//         })
-//       }
-//     });
-//   }
-// });
+//callback hell -> pyramind of doom
+fs.readFile("f1.txt", function cb1(err, res) {
+	if (err) {
+		console.log(err);
+	} else {
+		console.log(res + "");
+		fs.readFile("f2.txt", function cb2(err, res) {
+			if (err) {
+				console.log(err);
+			} else {
+				console.log(res + "");
+				fs.readFile("f3.txt", function cb3(err, res) {
+					if (err) {
+						console.log(err);
+					} else {
+						console.log(res + "");
+						console.log("read all files");
+					}
+				});
+			}
+		});
+	}
+});
 
 // 1st way to overcome callback hell is to separate the callabck functions
 
