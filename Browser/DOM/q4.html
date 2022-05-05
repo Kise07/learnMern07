@@ -54,6 +54,17 @@
     <div class="card" data-color="green"></div>
     <div class="card" data-color="blue"></div>
 
+    <script>
+        let cards = document.querySelectorAll(".card");
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("dblclick", function (e) {
+                let classToBeAttached = e.currentTarget.getAttribute("data-color");
+                e.currentTarget.setAttribute("data-color", "used");
+                e.currentTarget.classList.add(classToBeAttached);
+            });
+        }
+    </script>
+
 </body>
 
-</html> 
+</html>
